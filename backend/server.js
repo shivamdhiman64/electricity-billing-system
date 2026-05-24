@@ -5,7 +5,14 @@ const { init } = require('./database');
 const app = express();
 const PORT = 5000;
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ 
+  origin: [
+    'http://localhost:5173',
+    'https://electricity-billing-phi.vercel.app',
+    'https://electricity-billing-mpbbhx1mg-shivam-dhiman-s-projects.vercel.app'
+  ], 
+  credentials: true 
+}));
 app.use(express.json());
 
 app.use('/api', require('./routes/auth'));
