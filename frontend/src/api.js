@@ -1,5 +1,5 @@
 // api.js - Centralized API calls
-const BASE_URL = '/api';
+const BASE_URL = 'https://electricity-backend-1fp7.onrender.com/api';
 
 // Helper for fetch with error handling
 const request = async (url, options = {}) => {
