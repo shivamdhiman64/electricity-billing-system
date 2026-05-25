@@ -5,16 +5,7 @@ const { init } = require('./database');
 const app = express();
 const PORT = 5000;
 
-app.use(cors({ 
-  origin: [
-    'http://localhost:5173',
-    'https://electricity-billing-phi.vercel.app',
-    'https://electricity-billing-mpbbhx1mg-shivam-dhiman-s-projects.vercel.app'
-    'https://billing.shivamdhiman.com',
-'https://www.billing.shivamdhiman.com',
-  ], 
-  credentials: true 
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api', require('./routes/auth'));
@@ -27,8 +18,4 @@ app.get('/api/health', (req, res) => res.json({ status: 'OK' }));
 
 init().then(() => {
   app.listen(PORT, () => {
-    console.log('\n⚡ Smart Electricity Billing System');
-    console.log(`🚀 Server: http://localhost:${PORT}`);
-    console.log(`📊 Admin: admin / 1234\n`);
-  });
-}).catch(err => { console.error('DB Error:', err); process.exit(1); });
+    console.log('\n⚡ Smart Electricity Billing System
