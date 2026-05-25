@@ -10,6 +10,8 @@ app.use(cors({
     'http://localhost:5173',
     'https://electricity-billing-phi.vercel.app',
     'https://electricity-billing-mpbbhx1mg-shivam-dhiman-s-projects.vercel.app'
+    'https://billing.shivamdhiman.com',
+'https://www.billing.shivamdhiman.com',
   ], 
   credentials: true 
 }));
